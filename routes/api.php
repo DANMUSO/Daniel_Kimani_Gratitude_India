@@ -19,6 +19,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::apiResources([
-    'product' => 'App\Http\Controllers\API\ProductController',
-    'developer' => 'App\Http\Controllers\API\DeveloperController'
+    'question' => 'App\Http\Controllers\API\QuestionController',
+    'aptitude' => 'App\Http\Controllers\API\AptitudeController',
+    'logical' => 'App\Http\Controllers\API\LogicalController',
+    'technical' => 'App\Http\Controllers\API\TechnicalController'
     ]);

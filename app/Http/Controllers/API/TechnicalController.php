@@ -1,17 +1,12 @@
 <?php
 
 namespace App\Http\Controllers\API;
-use Image;
+
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Developer;
-class DeveloperController extends Controller
+use App\Models\Question;
+class TechnicalController extends Controller
 {
-
-    public function __construct()
-    {
-        $this->middleware('auth:api');
-    }
     /**
      * Display a listing of the resource.
      *
@@ -19,7 +14,7 @@ class DeveloperController extends Controller
      */
     public function index()
     {
-        return Developer::latest()->paginate(10);
+        return Question::where('category','Technical')->latest()->paginate(10);
     }
 
     /**
@@ -30,23 +25,7 @@ class DeveloperController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, [
-            'email' => 'required|string|email|max:191|unique:developers',
-            'phone' => 'required|unique:developers',
-        ]);
-        if($request->photo) {
-            $name = time().'.'. explode('/', explode(':', substr($request->photo, 0 , strpos($request->photo, ';')))[1])[1];
-        Image::make($request->photo)->save(public_path('img/product/').$name);
-        }
-        $dev = new Developer;
-        $dev -> name = $request->name;
-        $dev -> devtype = $request-> devtype;
-        $dev -> phone = $request-> phone;
-        $dev -> email = $request-> email;
-        $dev ->image =$name;
-        $dev -> save();
-
-        echo json_encode($dev);
+        //
     }
 
     /**

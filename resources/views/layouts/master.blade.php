@@ -36,7 +36,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
       <img src="https://laravel.com/img/logomark.min.svg" alt="Advance APP" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">Advance APP</span>
+      <span class="brand-text font-weight-light">Web-based APP</span>
     </a>
 
     <!-- Sidebar -->
@@ -69,47 +69,53 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-copy"></i>
               <p style="color:#fff">
-                Management
-              </p>
+                Management Questions
+              </p> &nbsp &nbsp&nbsp<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+            </svg>
             </a>
             <ul class="nav nav-treeview" style="display: none;">
             <li class="nav-item">
-                <router-link to="/developer" class="nav-link">
+                <router-link to="/question" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p style="color:#fff">Developer</p>
+                  <p style="color:#fff">Questions</p>
+                </router-link>
+              </li>
+            <li class="nav-item">
+                <router-link to="/technical" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p style="color:#fff">Technical Questions</p>
                 </router-link>
               </li>
               <li class="nav-item">
-                <router-link to="/product" class="nav-link">
+                <router-link to="/aptitude" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p style="color:#fff">Product</p>
+                  <p style="color:#fff">Aptitude Questions</p>
                 </router-link>
               </li>
-            </ul>
-          </li>
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
-              <p>
-                Inventory Management
-              </p>
-            </a>
-            <ul class="nav nav-treeview" style="display: none;">
+              <li class="nav-item">
+                <router-link to="/logical" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p style="color:#fff">Logical Questions</p>
+                </router-link>
+              </li>
               
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Sales</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Stocks</p>
-                </a>
-              </li>
             </ul>
           </li>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
           <li class="nav-item">
           <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
